@@ -20,7 +20,7 @@ data "okta_brands" "natl" {}
 # $ terraform import okta_theme.example <theme id>
 resource "okta_theme" "natl" {
   brand_id                               = tolist(data.okta_brands.natl.brands)[0].id
-  logo                                   = ".\\co-branded-shieldonly-fullcolor.jpg"
+  logo                                   = "./co-branded-shieldonly-fullcolor.jpg"
   favicon                                = ""
   background_image                       = ""
   primary_color_hex                      = "#1662dd"
