@@ -20,7 +20,7 @@ data "okta_brands" "natl" {}
 # $ terraform import okta_theme.example <theme id>
 resource "okta_theme" "natl" {
   brand_id                               = tolist(data.okta_brands.natl.brands)[0].id
-  logo                                   = "./co-branded-shieldonly-fullcolor.jpg"
+  logo                                   = "./CoBrand_okta_theme.png"
   favicon                                = ""
   background_image                       = ""
   primary_color_hex                      = "#1662dd"
@@ -30,5 +30,5 @@ resource "okta_theme" "natl" {
   sign_in_page_touch_point_variant       = "OKTA_DEFAULT"
   end_user_dashboard_touch_point_variant = "OKTA_DEFAULT"
   error_page_touch_point_variant         = "OKTA_DEFAULT"
-  email_template_touch_point_variant     = "OKTA_DEFAULT"
+  email_template_touch_point_variant     = "FULL_THEME"
 }
